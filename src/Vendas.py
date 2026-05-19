@@ -110,11 +110,23 @@ elif Func == 3:
 
 elif Func == 4:
 
+    carros = carregar_dados('Carros.json')
+    clientes = carregar_dados('Clientes.json')
+    funcionarios = carregar_dados('funcionarios.json')
+
+    print("\n=== FUNCIONÁRIOS ===")
+    print(json.dumps(funcionarios, indent=4))
+
+    print("\n=== CLIENTES ===")
+    print(json.dumps(clientes, indent=4))
+
+    print("\n=== CARROS ===")
+    print(json.dumps(carros, indent=4))
+
     Vendas(
-        input("Qual o vendedor? "),
+        input("\nQual o vendedor? "),
         input("Qual o cliente? "),
         input("Qual o carro vendido? ")
     )
-
 else:
     print("Opção inválida!")
