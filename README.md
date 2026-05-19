@@ -13,13 +13,14 @@ Projeto acadêmico em Python utilizando arquivos JSON para cadastro de carros, c
 
 - Python
 - JSON
-## Como Clonar 
+# Como Clonar
+
 ```bash
 gh repo clone KaiserJK/sistema-vendas-carros VendasConcessionaria
+```
 
-
-
-## Como executar
+# Como executar
 
 ```bash
 python src/Vendas.py
+```
