@@ -1,0 +1,7 @@
+funcionarios.json
+Vendas.json
+Clientes.json
+Carros.json
+.venv/
+__pycache__/
+.pytest_cache/
