@@ -76,7 +76,16 @@ def CadastrarFuncionario(Idfuncionario, Nome):
     print("Funcionário cadastrado com sucesso!")
 
 
-# Registra vendas e remove carro do estoque
+
+#Lista os carros disponíveis
+def ListarCarros():
+
+    carros = carregar_dados('Carros.json')
+
+    print(json.dumps(carros, indent=4))
+
+# Registra vendas 
+
 def Vendas():
 
     funcionarios = carregar_dados('funcionarios.json')
@@ -131,6 +140,7 @@ Func = int(input(
     'Para cadastrar um funcionário digite "2"\n'
     'Para cadastrar um cliente digite "3"\n'
     'Para realizar uma venda digite "4"\n'
+    'Para listar os carros digite "5"\n'
     'Entrada do usuario: '
 ))
 
@@ -166,7 +176,12 @@ elif Func == 3:
 elif Func == 4:
 
     Vendas()
+    
+#lista os carros disponíveis quando chamado
 
+elif Func == 5:
+
+    ListarCarros()
 
 # Opção inválida
 else:
