@@ -1,5 +1,22 @@
 import json
+import os
 
+
+def criar_arquivos_json():
+    arquivos = [
+        "Carros.json",
+        "Clientes.json",
+        "funcionarios.json",
+        "Vendas.json"
+    ]
+
+    for arquivo in arquivos:
+        if not os.path.exists(arquivo):
+            with open(arquivo, "w") as f:
+                json.dump({}, f, indent=4)
+
+
+criar_arquivos_json()
 
 def carregar_dados(arquivo):
     with open(arquivo, 'r') as f:
